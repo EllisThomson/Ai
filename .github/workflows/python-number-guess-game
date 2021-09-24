@@ -1,0 +1,40 @@
+h = 0
+import random
+s=5
+f=[1,2,3,4,5,6,7,8,9,10]
+random.choice(f)
+h=random.choice(f)
+print(5)
+if 5<h:
+    s=8
+    print('higher')
+if s==8:
+    print('8')
+if h<5:
+    print('lower')
+    s=3
+if s==3:
+    print(3)
+    if s==3:
+         if h<3:
+            print('lower')
+            s=2
+            print(2)            
+if h<2:
+    print('lower')
+    s=1
+    print(1)
+if s==8:
+    if h>8:
+        print('higher')
+        s=9
+        print(9)
+if s==9:
+    if h>9:
+        s=10
+        print(10)
+if s==8:
+    if h<8:
+        s=7
+        print(7)
+if s==7:
