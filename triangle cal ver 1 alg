@@ -1,0 +1,28 @@
+print('show work?')
+i=input('y or n')
+print('how many xs')
+a=int(input())
+print(' anything else like a+b+c just do 0 if none')
+e=180
+e=e-int(input())
+if i=='y':
+    print(e)
+e=e-int(input())
+if i=='y':
+    print(e)
+e=e-int(input())
+if i=='y':
+    print(e)
+f=e/a
+if i=='y':
+    print('x=')
+    print(f)
+print("write a alg")
+print('amount of xs')
+h=input('+ or -')
+if h=='+':
+    g=int(input('how many var'))*f+int(input('how much adding'))
+    print(g)
+if h=='-':
+    g=int(input('how many var'))*f-int(input('how much taking away'))
+    print(g)
