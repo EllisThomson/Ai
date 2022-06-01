@@ -1,0 +1,24 @@
+g=[]
+f=0
+c=[]
+e=[]
+d=-1
+a='hello'
+b=['h']
+for i in a:
+    c.append(i)
+    d=d+1
+    print(c)
+while d != -1:
+    if b[0]!=c[d]:
+        e.append('.')
+    if b[0]==c[d]:
+        e.append('/')
+        f=f+1
+        print(f)
+        print(d)
+        g.append(b[0]+str(d))
+    d=d-1
+    print(d)
+print(e)
+print(g)
