@@ -1,0 +1,629 @@
+import random
+hp=0
+hp0=0
+effectam=0
+changemv=0
+statchk0=0
+fighters=['leon']
+whof=random.choice(fighters)
+if whof=='leon':
+    opoke=['raboot',0]
+team=input('bad decent or broken pokemon')
+if team=='bad':
+    team1=['raboot','boldore']
+    pokemonout=team1[0]
+if pokemonout=='raboot':
+    hp=65
+    hp0=hp
+    df=60
+    atck=86
+    poketype='fr'
+    moves=['double-edge',120,100,'30rno','headbutt',70,100,'30fno','flamethrower',90,100,'10bfi','doublekick',60,100,'000fi']
+if pokemonout=='boldore':
+    hp=70
+    poketype='ro'
+    hp0=hp
+    moves=['earthpower',900,100,'000ro','earthquake',100,100,'000ro''explosion',250,100,'k00no','takle',40,100,'000no']
+def statchk():
+    if moves[statchk0]=='0':
+        hp0=hp0
+    if moves[statchk0][2]=='r':
+        recoil=moves[statchk0][0]
+        print(recoil)
+        recoil=str(recoil+moves[statchk0][0])
+        recoil=int(recoil)
+        print(recoil)
+        print(dmg)
+        hp0=hp-recoil%dmg
+        print('hp',hp0)
+if opoke[0]=='raboot':
+    ohp=65
+    orhp=ohp
+    opoketype='fr'
+    odf=60
+    oatck=86
+    pokemonam=1
+print('your pokemon is',opoke[0])
+print('your moves are')
+print(moves[0])
+print('power',moves[1])
+print(moves[4])
+print('power',moves[5])
+print(moves[8])
+print('power',moves[9])
+print(moves[12])
+print('power',moves[13])
+#fire=electric electric=grass
+move=input('what move or swap')
+if move==moves[0]:
+    statchk0=3
+    mtype=moves[statchk0][3]+moves[statchk0][4]
+    if opoketype=='no'or'ro'or'st'or'ic'or'da' and mtype=='fi':
+        effectam=2
+    if opoketype=='fi'or'bu'or'gr' and mtype=='fl':
+        effectam=2
+    if opoketype=='fa'or'gr' and mtype=='po':
+        effectam=2
+    if opoketype=='po'or'ro'or'st'or'fi'or'el' and mtype=='gu':
+        effectam=2
+    if opoketype=='fl'or'bu'or'fr'or'ic' and mtype=='ro':
+        effectam=2
+    if opoketype=='gr'or'ps'or'da' and mtype=='bu':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='gh':
+        effectam=2
+    if opoketype=='ro'or'ic'or'fa' and mtype=='st':
+        effectam=2
+    if opoketype=='bu'or'st'or'gr'or'ic'and mtype=='fr':
+        effectam=2
+    if opoketype=='gr'or'ro'or'fi'and mtype=='wa':
+        effectam=2
+    if opoketype=='gr'or'ro'or'wa' and mtype=='gr':
+        effectam=2
+    if opoketype=='fl'or'wa' and mtype=='el':
+        effectam=2
+    if opoketype=='fi'or'po' and mtype=='ps':
+        effectam=2
+    if opoketype=='fl'or'gu'or'gr'or'dr' and mtype=='ic':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='da':
+        effectam=2
+    if opoketype=='fa'or'dr'or'da' and mtype=='fa':
+        effectam=2
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='fl' and mtype=='fi'or'bu'or'gr':
+        effectam=.5
+    if opoketype=='fl' and mtype=='gu':
+        effectam=0
+    if opoketype=='po' and mtype=='fi'or'po'or'gr'or'fa':
+        effectam=.5
+    if opoketype=='gu' and mtype=='po'or'ro':
+        effectam=.5
+    if opoketype=='gu' and mtype=='el':
+        effectam=0
+    if opoketype=='ro' and mtype=='no'or'fl'or'po'or'fi':
+        effectam=.5
+    if opoketype=='bu' and mtype=='fi'or'gr'or'gu':
+        effectam=.5
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='st' and mtype=='no'or'fl'or'ro'or'bu'or'st'or'gr'or'ps'or'ic'or'dr'or'fa':
+        effectam=.5
+    if opoketype=='st' and mtype=='po':
+        effectam=0
+    if opoketype=='fr' and mtype=='bu'or'st'or'gr'or'ic'or'fr':
+        effectam=.5
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='wa' and mtype=='st'or'fi'or'wa'or'ic':
+        effectam=.5
+    if opoketype=='gr' and mtype=='gu'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='ps' and mtype=='fi'or'ps':
+        effectam=.5
+    if opoketype=='ic' and mtype=='ic':
+        effectam=.5
+    if opoketype=='dr' and mtype=='fr'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='da' and mtype=='gh'or'da':
+        effectam=.5
+    if opoketype=='da' and mtype=='ps':
+        effectam=0
+    if opoketype=='fa' and mtype=='fi'or'bu'or'dr':
+        effectam=.5
+    if opoketype=='fa' and mtype=='dr':
+        effectam=0
+    ohp=ohp-moves[1]*(atck/odf)*effectam
+    dmg=moves[1]*(atck/odf)*effectam
+    dmg=int(dmg)
+    if moves[statchk0]=='0':
+        hp0=hp0
+    if moves[statchk0][1]=='r':
+        recoil=moves[statchk0][0]
+        recoil=str(recoil+moves[statchk0][0])
+        recoil=int(recoil)
+        hp0=hp-recoil%dmg
+        print('you were hurt by recoil')
+    if moves[statchk0][2]=='b':
+        burn=str([statchk0][0])
+        burn=int(burn)
+        rand=range(burn)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        burnef=random.choice(randlis)
+        if burnef==random.choice(randlis):
+            opburn=1
+            print('your oponent was burnt')
+    if moves[statchk0][2]=='p':
+        posion=str([statchk0][0])
+        posion=int(posion)
+        rand=range(posion)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        posionef=random.choice(rand)
+        if posionef==random.choice(randlis):
+            opposion=1
+            print('your oponent posioned')
+    if moves[statchk0][2]=='f':
+        flinch=str([statchk0][0])
+        flinch=int(flinch)
+        rand=range(flinch)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        randlis.append(rand)
+        flinchef=random.choice(rand)
+        if flinchef==random.choice(randlis):
+            opflinch=1
+            print('your oponent flinched')
+if move==moves[1]:
+    statchk0=6
+    mtype=moves[statchk0][3]+moves[statchk0][4]
+    if opoketype==mtype:
+        effectam=.5
+    if opoketype=='fr' and mtype=='el':
+        effectam=1 
+    if opoketype=='el' and mtype=='gr':
+            effectam=1 
+    if opoketype=='gh' and mtype=='no'or'fi':
+        effectam=0
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='gr' and mtype=='el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fi':
+        effectam=.5 
+    if opoketype=='ro' and mtype=='no'or'po'or'fi'or'fl':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='no'and mtype=='gh':
+        effectam=0
+    if opoketype=='no'or'ro'or'st'or'ic'or'da' and mtype=='fi':
+        effectam=2
+    if opoketype=='fi'or'bu'or'gr' and mtype=='fl':
+        effectam=2
+    if opoketype=='fa'or'gr' and mtype=='po':
+        effectam=2
+    if opoketype=='po'or'ro'or'st'or'fi'or'el' and mtype=='gu':
+        effectam=2
+    if opoketype=='fl'or'bu'or'fr'or'ic' and mtype=='ro':
+        effectam=2
+    if opoketype=='gr'or'ps'or'da' and mtype=='bu':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='gh':
+        effectam=2
+    if opoketype=='ro'or'ic'or'fa' and mtype=='st':
+        effectam=2
+    if opoketype=='bu'or'st'or'gr'or'ic'and mtype=='fr':
+        effectam=2
+    if opoketype=='gr'or'ro'or'fi'and mtype=='wa':
+        effectam=2
+    if opoketype=='gr'or'ro'or'wa' and mtype=='gr':
+        effectam=2
+    if opoketype=='fl'or'wa' and mtype=='el':
+        effectam=2
+    if opoketype=='fi'or'po' and mtype=='ps':
+        effectam=2
+    if opoketype=='fl'or'gu'or'gr'or'dr' and mtype=='ic':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='da':
+        effectam=2
+    if opoketype=='fa'or'dr'or'da' and mtype=='fa':
+        effectam=2
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='fl' and mtype=='fi'or'bu'or'gr':
+        effectam=.5
+    if opoketype=='fl' and mtype=='gu':
+        effectam=0
+    if opoketype=='po' and mtype=='fi'or'po'or'gr'or'fa':
+        effectam=.5
+    if opoketype=='gu' and mtype=='po'or'ro':
+        effectam=.5
+    if opoketype=='gu' and mtype=='el':
+        effectam=0
+    if opoketype=='ro' and mtype=='no'or'fl'or'po'or'fi':
+        effectam=.5
+    if opoketype=='bu' and mtype=='fi'or'gr'or'gu':
+        effectam=.5
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='st' and mtype=='no'or'fl'or'ro'or'bu'or'st'or'gr'or'ps'or'ic'or'dr'or'fa':
+        effectam=.5
+    if opoketype=='st' and mtype=='po':
+        effectam=0
+    if opoketype=='fr' and mtype=='bu'or'st'or'gr'or'ic'or'fr':
+        effectam=.5
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='wa' and mtype=='st'or'fi'or'wa'or'ic':
+        effectam=.5
+    if opoketype=='gr' and mtype=='gu'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='ps' and mtype=='fi'or'ps':
+        effectam=.5
+    if opoketype=='ic' and mtype=='ic':
+        effectam=.5
+    if opoketype=='dr' and mtype=='fr'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='da' and mtype=='gh'or'da':
+        effectam=.5
+    if opoketype=='da' and mtype=='ps':
+        effectam=0
+    if opoketype=='fa' and mtype=='fi'or'bu'or'dr':
+        effectam=.5
+    if opoketype=='fa' and mtype=='dr':
+        effectam=0
+    ohp=ohp-moves[5]*(atck/odf)*effectam
+    dmg=moves[5]*(atck/odf)*effectam
+    dmg=int(dmg)
+    if moves[statchk0]=='0':
+        hp0=hp0
+    if moves[statchk0][2]=='r':
+        recoil=moves[statchk0][0]
+        recoil=str(recoil+moves[statchk0][0])
+        recoil=int(recoil)
+        hp0=hp-recoil%dmg
+        print('you were hurt by recoil')
+    if moves[statchk0][2]=='b':
+        burn=str([statchk0][0])
+        burn=int(burn)
+        rand=range(burn)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        burnef=random.choice(randlis)
+        if burnef==random.choice(randlis):
+            opburn=1
+            print('your oponent was burnt')
+    if moves[statchk0][2]=='p':
+        posion=str([statchk0][0])
+        posion=int(posion)
+        rand=range(posion)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        posionef=random.choice(rand)
+        if posionef==random.choice(randlis):
+            opposion=1
+            print('your oponent posioned')
+    if moves[statchk0][2]=='f':
+        flinch=str([statchk0][0])
+        flinch=int(flinch)
+        rand=range(flinch)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        randlis.append(rand)
+        flinchef=random.choice(rand)
+        if flinchef==random.choice(randlis):
+            opflinch=1
+            print('your oponent flinched')
+if move==moves[2]:
+    statchk0=9
+    mtype=moves[statchk0][3]+moves[statchk0][4]
+    if opoketype==mtype:
+        effectam=.5
+    if opoketype=='fr' and mtype=='el':
+        effectam=1 
+    if opoketype=='el' and mtype=='gr':
+            effectam=1 
+    if opoketype=='gh' and mtype=='no'or'fi':
+        effectam=0
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='gr' and mtype=='el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fi':
+        effectam=.5 
+    if opoketype=='ro' and mtype=='no'or'po'or'fi'or'fl':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='no'and mtype=='gh':
+        effectam=0
+    if opoketype=='no'or'ro'or'st'or'ic'or'da' and mtype=='fi':
+        effectam=2
+    if opoketype=='fi'or'bu'or'gr' and mtype=='fl':
+        effectam=2
+    if opoketype=='fa'or'gr' and mtype=='po':
+        effectam=2
+    if opoketype=='po'or'ro'or'st'or'fi'or'el' and mtype=='gu':
+        effectam=2
+    if opoketype=='fl'or'bu'or'fr'or'ic' and mtype=='ro':
+        effectam=2
+    if opoketype=='gr'or'ps'or'da' and mtype=='bu':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='gh':
+        effectam=2
+    if opoketype=='ro'or'ic'or'fa' and mtype=='st':
+        effectam=2
+    if opoketype=='bu'or'st'or'gr'or'ic'and mtype=='fr':
+        effectam=2
+    if opoketype=='gr'or'ro'or'fi'and mtype=='wa':
+        effectam=2
+    if opoketype=='gr'or'ro'or'wa' and mtype=='gr':
+        effectam=2
+    if opoketype=='fl'or'wa' and mtype=='el':
+        effectam=2
+    if opoketype=='fi'or'po' and mtype=='ps':
+        effectam=2
+    if opoketype=='fl'or'gu'or'gr'or'dr' and mtype=='ic':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='da':
+        effectam=2
+    if opoketype=='fa'or'dr'or'da' and mtype=='fa':
+        effectam=2
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='fl' and mtype=='fi'or'bu'or'gr':
+        effectam=.5
+    if opoketype=='fl' and mtype=='gu':
+        effectam=0
+    if opoketype=='po' and mtype=='fi'or'po'or'gr'or'fa':
+        effectam=.5
+    if opoketype=='gu' and mtype=='po'or'ro':
+        effectam=.5
+    if opoketype=='gu' and mtype=='el':
+        effectam=0
+    if opoketype=='ro' and mtype=='no'or'fl'or'po'or'fi':
+        effectam=.5
+    if opoketype=='bu' and mtype=='fi'or'gr'or'gu':
+        effectam=.5
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='st' and mtype=='no'or'fl'or'ro'or'bu'or'st'or'gr'or'ps'or'ic'or'dr'or'fa':
+        effectam=.5
+    if opoketype=='st' and mtype=='po':
+        effectam=0
+    if opoketype=='fr' and mtype=='bu'or'st'or'gr'or'ic'or'fr':
+        effectam=.5
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='wa' and mtype=='st'or'fi'or'wa'or'ic':
+        effectam=.5
+    if opoketype=='gr' and mtype=='gu'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='ps' and mtype=='fi'or'ps':
+        effectam=.5
+    if opoketype=='ic' and mtype=='ic':
+        effectam=.5
+    if opoketype=='dr' and mtype=='fr'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='da' and mtype=='gh'or'da':
+        effectam=.5
+    if opoketype=='da' and mtype=='ps':
+        effectam=0
+    if opoketype=='fa' and mtype=='fi'or'bu'or'dr':
+        effectam=.5
+    if opoketype=='fa' and mtype=='dr':
+        effectam=0
+    ohp=ohp-moves[8]*(atck/odf)*effectam
+    dmg=moves[8]*(atck/odf)*effectam
+    dmg=int(dmg)
+    if moves[statchk0]=='0':
+        hp0=hp0
+    if moves[statchk0][2]=='r':
+        recoil=moves[statchk0][0]
+        recoil=str(recoil+moves[statchk0][0])
+        recoil=int(recoil)
+        hp0=hp-recoil%dmg
+        print('you were hurt by recoil')
+    if moves[statchk0][2]=='b':
+        burn=str([statchk0][0])
+        burn=int(burn)
+        rand=range(burn)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        burnef=random.choice(randlis)
+        if burnef==random.choice(randlis):
+            opburn=1
+            print('your oponent was burnt')
+    if moves[statchk0][2]=='p':
+        posion=str([statchk0][0])
+        posion=int(posion)
+        rand=range(posion)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        posionef=random.choice(rand)
+        if posionef==random.choice(randlis):
+            opposion=1
+            print('your oponent posioned')
+    if moves[statchk0][2]=='f':
+        flinch=str([statchk0][0])
+        flinch=int(flinch)
+        rand=range(flinch)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        randlis.append(rand)
+        flinchef=random.choice(rand)
+        if flinchef==random.choice(randlis):
+            opflinch=1
+            print('your oponent flinched')
+if move==moves[3]:
+    statchk0=12
+    mtype=moves[statchk0][3]+moves[statchk0][4]
+    if opoketype==mtype:
+        effectam=.5
+    if opoketype=='fr' and mtype=='el':
+        effectam=1 
+    if opoketype=='el' and mtype=='gr':
+            effectam=1 
+    if opoketype=='gh' and mtype=='no'or'fi':
+        effectam=0
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='gr' and mtype=='el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fi':
+        effectam=.5 
+    if opoketype=='ro' and mtype=='no'or'po'or'fi'or'fl':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='no'and mtype=='gh':
+        effectam=0
+    if opoketype=='no'or'ro'or'st'or'ic'or'da' and mtype=='fi':
+        effectam=2
+    if opoketype=='fi'or'bu'or'gr' and mtype=='fl':
+        effectam=2
+    if opoketype=='fa'or'gr' and mtype=='po':
+        effectam=2
+    if opoketype=='po'or'ro'or'st'or'fi'or'el' and mtype=='gu':
+        effectam=2
+    if opoketype=='fl'or'bu'or'fr'or'ic' and mtype=='ro':
+        effectam=2
+    if opoketype=='gr'or'ps'or'da' and mtype=='bu':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='gh':
+        effectam=2
+    if opoketype=='ro'or'ic'or'fa' and mtype=='st':
+        effectam=2
+    if opoketype=='bu'or'st'or'gr'or'ic'and mtype=='fr':
+        effectam=2
+    if opoketype=='gr'or'ro'or'fi'and mtype=='wa':
+        effectam=2
+    if opoketype=='gr'or'ro'or'wa' and mtype=='gr':
+        effectam=2
+    if opoketype=='fl'or'wa' and mtype=='el':
+        effectam=2
+    if opoketype=='fi'or'po' and mtype=='ps':
+        effectam=2
+    if opoketype=='fl'or'gu'or'gr'or'dr' and mtype=='ic':
+        effectam=2
+    if opoketype=='gh'or'ps' and mtype=='da':
+        effectam=2
+    if opoketype=='fa'or'dr'or'da' and mtype=='fa':
+        effectam=2
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='fl' and mtype=='fi'or'bu'or'gr':
+        effectam=.5
+    if opoketype=='fl' and mtype=='gu':
+        effectam=0
+    if opoketype=='po' and mtype=='fi'or'po'or'gr'or'fa':
+        effectam=.5
+    if opoketype=='gu' and mtype=='po'or'ro':
+        effectam=.5
+    if opoketype=='gu' and mtype=='el':
+        effectam=0
+    if opoketype=='ro' and mtype=='no'or'fl'or'po'or'fi':
+        effectam=.5
+    if opoketype=='bu' and mtype=='fi'or'gr'or'gu':
+        effectam=.5
+    if opoketype=='gh' and mtype=='po'or'bu':
+        effectam=.5
+    if opoketype=='st' and mtype=='no'or'fl'or'ro'or'bu'or'st'or'gr'or'ps'or'ic'or'dr'or'fa':
+        effectam=.5
+    if opoketype=='st' and mtype=='po':
+        effectam=0
+    if opoketype=='fr' and mtype=='bu'or'st'or'gr'or'ic'or'fr':
+        effectam=.5
+    if opoketype=='fi' and mtype=='ro'or'bu'or'da':
+        effectam=.5
+    if opoketype=='wa' and mtype=='st'or'fi'or'wa'or'ic':
+        effectam=.5
+    if opoketype=='gr' and mtype=='gu'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='el' and mtype=='fl'or'st'or'el':
+        effectam=.5
+    if opoketype=='ps' and mtype=='fi'or'ps':
+        effectam=.5
+    if opoketype=='ic' and mtype=='ic':
+        effectam=.5
+    if opoketype=='dr' and mtype=='fr'or'wa'or'gr'or'el':
+        effectam=.5
+    if opoketype=='da' and mtype=='gh'or'da':
+        effectam=.5
+    if opoketype=='da' and mtype=='ps':
+        effectam=0
+    if opoketype=='fa' and mtype=='fi'or'bu'or'dr':
+        effectam=.5
+    if opoketype=='fa' and mtype=='dr':
+        effectam=0
+    ohp=ohp-moves[13]*(atck/odf)*effectam
+    dmg=moves[13]*(atck/odf)*effectam
+    dmg=int(dmg)
+    ohp=ohp-dmg
+    if moves[statchk0]=='0':
+        hp0=hp0
+    if moves[statchk0][2]=='r':
+        recoil=moves[statchk0][0]
+        recoil=str(recoil+moves[statchk0][0])
+        recoil=int(recoil)
+        hp0=hp-recoil%dmg
+        print('you were hurt by recoil')
+    if moves[statchk0][2]=='b':
+        burn=str([statchk0][0])
+        burn=int(burn)
+        rand=range(burn)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        burnef=random.choice(randlis)
+        if burnef==random.choice(randlis):
+            opburn=1
+            print('your oponent was burnt')
+    if moves[statchk0][2]=='p':
+        posion=str([statchk0][0])
+        posion=int(posion)
+        rand=range(posion)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        posionef=random.choice(rand)
+        if posionef==random.choice(randlis):
+            opposion=1
+            print('your oponent posioned')
+    if moves[statchk0][2]=='f':
+        flinch=str([statchk0][0])
+        flinch=int(flinch)
+        rand=range(flinch)
+        randlis=[]
+        for chance in(rand):
+            randlis.append(chance)
+        randlis.append(rand)
+        flinchef=random.choice(rand)
+        if flinchef==random.choice(randlis):
+            opflinch=1
+            print('your oponent flinched')
+changemv=1
+print('your hp is',hp0)
+print('oppenents hp is',ohp)
+def win():
+    if ohp<1 and opoke[pokemonam]== 0:
+        print('you won')
+win()
